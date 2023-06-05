@@ -8,4 +8,9 @@
 
 # ноутбук
 #     12
-
+my_dict = {}
+your_word = str(input("Введите ваше слово: \n"))
+your_list = list(your_word)
+count = 
+for i in range(len(your_list)):
+    
