@@ -8,9 +8,29 @@
 
 # ноутбук
 #     12
-my_dict = {}
-your_word = str(input("Введите ваше слово: \n"))
-your_list = list(your_word)
-count = 
-for i in range(len(your_list)):
-    
+
+letters = {'AEIOULNSTR' : 1,
+           'DG' : 2,
+           'BCMP' : 3, 
+           'FHVWY' : 4,
+           'K' : 5,
+           'JX' : 8,
+           'QZ' : 10,
+           'АВЕИНОРСТ' : 1,
+           'ДКЛМПУ' : 2, 
+           'БГЁЬЯ' : 3,
+           'ЙЫ' : 4,
+           'ЖЗХЦЧ' : 5,
+           'ШЭЮ' : 8,
+           'ФЩЪ' : 10} # создаём словарь ключ это буквы и кол-во балов
+
+word = input('Введите слово: ')
+
+total = 0
+
+for ch in word.upper(): #наше слово становится большими буквами upper
+    for letter, score in letters.items():
+        if ch in letter: 
+            total += score
+
+print(f'Слово {word} весит {total} очков')
