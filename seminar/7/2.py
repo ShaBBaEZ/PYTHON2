@@ -13,11 +13,22 @@
 # print(‘same’)
 # else:
 # print(‘different’)
-import random
-print(values := [random.randint(0,10) for i in range(10)]) #Создаем список с рандомными значениями от 0-9
+# import random
+# print(values := [random.randint(0,10) for i in range(10)]) #Создаем список с рандомными значениями от 0-9
 
-characteristic = lambda items: items % 2 #создаём функцию характеристику в данном случае проверяем чётность
+# characteristic = lambda items: items % 2 #создаём функцию характеристику в данном случае проверяем чётность
 
-def some_by(func, objects):
-    for i in object:
-        if object[i] 
+# def some_by(func, element):
+#     my_list = []
+#     for i in element:
+#         if element[i] 
+
+def samy_by(func, list_obj: list) -> bool:
+    result = []
+    for obj in list_obj:
+        result.append(func(obj))
+    if len(set(result)) == 1:
+        return True
+    return False
+
+print(samy_by(lambda x: x%2==0, [2,4,6,8,10]))
